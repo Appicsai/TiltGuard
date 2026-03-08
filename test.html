@@ -3,62 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité - Appicsai</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Privacy Policy - Tilt Guard: Black Screen Hide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2563eb;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-gray: #f9fafb;
-            --card-bg: #ffffff;
-            --border-color: #e5e7eb;
-            --red-light: #fee2e2;
-            --red-dark: #b91c1c;
-            --green-light: #dcfce7;
-            --green-dark: #15803d;
+            --primary: #2563eb;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --bg-body: #f3f4f6;
+            --bg-card: #ffffff;
+            --border: #e5e7eb;
+            --red-bg: #fef2f2;
+            --red-text: #991b1b;
+            --green-bg: #f0fdf4;
+            --green-text: #166534;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-gray);
-            color: var(--text-dark);
+            background-color: var(--bg-body);
+            color: var(--text-main);
             line-height: 1.6;
             margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
             padding: 20px;
         }
 
-        .header {
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .app-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .app-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 18px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            width: 96px;
+            height: 96px;
+            background: #000; /* Représente l'écran noir */
+            border-radius: 22%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
         }
 
-        h1 { font-size: 2.2rem; margin-bottom: 10px; color: #111827; }
-        .last-updated { color: var(--text-light); font-size: 0.9rem; }
+        h1 { font-size: 28px; margin: 0; font-weight: 700; }
+        .last-updated { color: var(--text-muted); font-size: 14px; margin-top: 8px; }
 
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
+        h2 { font-size: 20px; border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 40px; }
+        
         .summary-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -66,87 +72,95 @@
             margin-top: 20px;
         }
 
-        .summary-box {
-            padding: 15px;
-            border-radius: 8px;
+        .box {
+            padding: 20px;
+            border-radius: 12px;
         }
 
-        .not-collected { background-color: var(--red-light); color: var(--red-dark); }
-        .collected { background-color: var(--green-light); color: var(--green-dark); }
+        .box.no { background: var(--red-bg); color: var(--red-text); }
+        .box.yes { background: var(--green-bg); color: var(--green-text); }
 
-        .summary-box h3 { margin-top: 0; font-size: 1rem; }
-        .summary-box ul { padding-left: 20px; margin-bottom: 0; }
+        .box h3 { margin: 0 0 10px 0; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .box ul { margin: 0; padding-left: 20px; }
 
-        h2 { border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 5px; margin-top: 30px; }
-        
-        .contact-btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 10px;
+        .badge {
+            background: #f3f4f6;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary);
         }
 
-        @media (max-width: 600px) {
+        .footer-contact {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 640px) {
             .summary-grid { grid-template-columns: 1fr; }
+            .card { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">
-        <div style="font-size: 50px;">📱</div> 
-        <h1>Appicsai</h1>
-        <p class="last-updated">Dernière mise à jour : 8 Mars 2026</p>
-    </div>
-
     <div class="card">
+        <div class="app-header">
+            <div class="app-icon">🕶️</div>
+            <h1>Tilt Guard: Black Screen Hide</h1>
+            <p>L'application <strong>Tilt Guard</strong> vous permet de masquer votre écran en un clin d'œil. Elle propose deux modes : le Mode Manuel et le Mode Auto (utilisant les capteurs de rotation).</p>
+            <div class="last-updated">Dernière mise à jour : 8 Mars 2026</div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--border);">
+
         <h2>Résumé Rapide</h2>
         <div class="summary-grid">
-            <div class="summary-box not-collected">
-                <h3>NON Collecté</h3>
+            <div class="box no">
+                <h3>Données NON collectées</h3>
                 <ul>
                     <li>Contenu de votre écran</li>
-                    <li>Informations personnelles</li>
-                    <li>Fichiers privés</li>
+                    <li>Informations personnelles (Nom, Email)</li>
+                    <li>Historique de navigation</li>
                 </ul>
             </div>
-            <div class="summary-box collected">
-                <h3>Collecté (Anonyme)</h3>
+            <div class="box yes">
+                <h3>Données collectées</h3>
                 <ul>
-                    <li>Données de crash</li>
-                    <li>Modèle du téléphone</li>
-                    <li>Statistiques d'usage</li>
+                    <li>Modèle de l'appareil & OS</li>
+                    <li>Rapports de crash (anonymes)</li>
+                    <li>ID publicitaire (pour AdMob)</li>
                 </ul>
             </div>
         </div>
-    </div>
 
-    <div class="card">
-        <h2>Politique Détaillée</h2>
-        <p>Cette politique de confidentialité explique comment <strong>Appicsai</strong> collecte et utilise les informations. En utilisant cette application, vous acceptez les termes décrits ici.</p>
-
-        <h3>Collecte de données</h3>
-        <p>Nous ne collectons aucune information personnellement identifiable. Les données collectées sont uniquement destinées à améliorer les performances de l'application via des outils tiers comme Firebase Analytics.</p>
-
-        <h3>Services Tiers</h3>
-        <p>L'application utilise des SDK tiers pour fonctionner correctement :</p>
+        <h2>SDK Tiers utilisés</h2>
+        <p>Pour assurer le bon fonctionnement, nous intégrons les services suivants :</p>
         <ul>
-            <li><strong>Firebase Analytics :</strong> Pour comprendre comment l'application est utilisée.</li>
-            <li><strong>Google AdMob :</strong> Pour afficher des publicités (identifiants publicitaires anonymes).</li>
+            <li><strong>Firebase Analytics & Crashlytics :</strong> Pour corriger les bugs.</li>
+            <li><strong>RevenueCat :</strong> Pour gérer vos abonnements ou achats in-app.</li>
+            <li><strong>Google AdMob :</strong> Pour diffuser des publicités adaptées.</li>
         </ul>
 
-        <h3>Protection des mineurs</h3>
-        <p>L'application n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons sciemment aucune donnée auprès de mineurs.</p>
+        <h2>Collecte et Utilisation</h2>
+        <p>Nous ne collectons, ne partageons et ne conservons aucune donnée personnelle. L'application utilise les capteurs de votre téléphone uniquement localement pour déclencher l'écran noir en Mode Auto.</p>
+
+        <h2>Conformité RGPD & Protection des enfants</h2>
+        <p>Pour les utilisateurs de l'UE, nous respectons le RGPD via les mécanismes de consentement Google. L'application n'est pas destinée aux enfants de moins de 13 ans.</p>
+
+        <h2>Contact</h2>
+        <p>Pour toute question concernant votre confidentialité, vous pouvez nous contacter directement :</p>
+        <p style="text-align: center;">
+            <a href="mailto:votre-email@gmail.com" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 18px;">Cliquez ici pour nous contacter</a>
+        </p>
     </div>
 
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Si vous avez des questions, contactez-nous :</p>
-        <a href="mailto:votre-email@gmail.com" class="contact-btn">Envoyer un Email</a>
+    <div class="footer-contact">
+        © 2026 - Appicsai Productions
     </div>
 </div>
 
